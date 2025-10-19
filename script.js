@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "hasnacantiksekali"; // ubah sesuai keinginan
+const ADMIN_PASSWORD = "hasnacantik"; // ubah sesuai keinginan
 const STORAGE_KEY = "tur_tur_posts_v1";
 const SARAN_KEY = "tur_tur_saran_v1";
 
