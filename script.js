@@ -102,3 +102,60 @@ logoutBtn.onclick = () => confirm("Logout admin?") && doLogout();
 
 window.handleDelete = handleDelete;
 updateUI();
+// ==== KRITIK & SARAN ====
+const SARAN_KEY = "tur_tur_saran_v1";
+const saranInput = document.getElementById("saranInput");
+const kirimSaranBtn = document.getElementById("kirimSaranBtn");
+const daftarSaran = document.getElementById("daftarSaran");
+
+let sarans = JSON.parse(localStorage.getItem(SARAN_KEY) || "[]");
+
+function renderSaran() {
+  daftarSaran.innerHTML = "";
+  if (sarans.length === 0) {
+    daftarSaran.innerHTML = "<p>Belum ada kritik atau saran.</p>";
+    return;
+  }
+
+  sarans.sort((a,b) => b.createdAt - a.createdAt).forEach(s => {
+    const div = document.createElement("div");
+    div.className = "saran-item";
+    div.innerHTML = `
+      <p>${escapeHtml(s.content).replace(/\n/g,"<br>")}</p>
+      <small>${new Date(s.createdAt).toLocaleString()}</small>
+      ${isAdmin ? `<div><button class="btn ghost" data-id="${s.id}" onclick="hapusSaran(this)">Hapus</button></div>` : ""}
+    `;
+    daftarSaran.appendChild(div);
+  });
+}
+
+function kirimSaran() {
+  const isi = saranInput.value.trim();
+  if (!isi) return alert("Isi kritik/saran tidak boleh kosong!");
+  const saran = { id: Date.now().toString(), content: isi, createdAt: Date.now() };
+  sarans.push(saran);
+  localStorage.setItem(SARAN_KEY, JSON.stringify(sarans));
+  saranInput.value = "";
+  renderSaran();
+}
+
+function hapusSaran(btn) {
+  const id = btn.dataset.id;
+  if (confirm("Hapus saran ini?")) {
+    sarans = sarans.filter(s => s.id !== id);
+    localStorage.setItem(SARAN_KEY, JSON.stringify(sarans));
+    renderSaran();
+  }
+}
+
+kirimSaranBtn.onclick = kirimSaran;
+window.hapusSaran = hapusSaran;
+
+// tambahkan pemanggilan render di akhir updateUI
+const _updateUI = updateUI;
+updateUI = function() {
+  _updateUI();
+  renderSaran();
+};
+
+updateUI();

@@ -141,6 +141,45 @@ h2 {
   justify-content: flex-end;
 }
 
+/* ==== Kritik & Saran ==== */
+.saran-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.saran-form textarea {
+  width: 100%;
+  max-width: 700px;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  resize: vertical;
+}
+
+.saran-list .saran-item {
+  background: #f9f9f9;
+  border-left: 4px solid #4682B4;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.saran-item small {
+  color: #666;
+}
+
+.saran-item .btn.ghost {
+  margin-top: 6px;
+  background: transparent;
+  border: 1px solid #4682B4;
+  color: #4682B4;
+}
+
 /* ==== Blog ==== */
 .posts .post {
   background: #fff;
