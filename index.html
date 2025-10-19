@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog Pribadi | Tur Tur</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog Pribadi</h1>
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#blog">Tulisan</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- HOME -->
+    <section id="home" class="section">
+      <h2>Hallo teman-teman</h2>
+      <p>
+        perkenalkan saya Isnanda Kholifaturrohman. tujuan adanya ini, hanya untuk mengubah kegabutan mendadi hal yang lebih produktif lagi, meskipun sekarang belum bernilai, setidaknya bisa buat ngejawab kalo besok ada pertanyaan "siapa disini yang sudah pernah mencoba bikin blog?" saya bisa angkat tangan.
+        </p>
+        <p>
+          anyway, saya pernah belajar membuat website sewaktu di sma dulu, karena kelas yang saya ambil adalah 'informatika'. namun, belum cukup menguasai pelajaran tersebut.
+        </p>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
+      <h2>Tentang Saya</h2>
+      <div class="biodata-container">
+        <div class="biodata-foto" title="Klik foto untuk menampilkan login admin" id="profileClick">
+          <img src="IMG_20250814_201530_627.jpg" alt="Foto Profil">
+        </div>
+        <div class="biodata-info">
+          <h3>Isnanda Kholifaturrohman</h3>
+          <p><strong>Mahasiswa</strong> | Travelling, Design, Bermain Gitar.</p>
+          <p>———————————————</p>
+          <p>Halo! Saya Isnanda Kholifaturrohman, seorang mahasiswa yang dirasa bisa semua tapi hanya sekedar bisa, atau lebih tepatnya belum mengenal skil luar biasa dari apa yang ada didalam diri saya.</p>
+          <div class="biodata-detail">
+            <p><strong>Nama:</strong> Isnanda Kholifaturrohman</p>
+            <p><strong>Kelahiran:</strong> 2007</p>
+            <p><strong>Asal:</strong> Jawa Tengah</p>
+            <p><strong>Email:</strong> <p>isnanda.Kholifaturrohman@gmail.com</p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="loginPanel" class="hidden-login" aria-hidden="true">
+        <label>Login Admin</label>
+        <input id="adminPwdInput" type="password" placeholder="Masukkan password admin" autocomplete="off" />
+        <div class="actions">
+          <button class="btn ghost" id="loginCancelBtn">Batal</button>
+          <button class="btn" id="loginSubmitBtn">Login</button>
+        </div>
+        <p id="loginError" style="color:#c62;display:none;margin-top:8px">Password salah.</p>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section">
+      <h2>Tulisan Terbaru</h2>
+      <div id="postsList" class="posts"></div>
+
+      <div id="newPostPanel" class="new-post" style="display:none">
+        <h3>Tulis Artikel Baru</h3>
+        <input id="postTitle" type="text" placeholder="Judul Artikel" />
+        <textarea id="postContent" placeholder="Isi artikel..."></textarea>
+        <div class="form-btns">
+          <button class="btn ghost" id="cancelPostBtn">Batal</button>
+          <button class="btn" id="savePostBtn">Tambah</button>
+        </div>
+      </div>
+
+      <div class="logout-btn">
+        <button class="btn" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </section>
+
+    <!-- CONTACT --><div class="kontak">
+  <h2>Kontak</h2>
+  <div class="kontak-container">
+    <a href="https://www.instagram.com/ftrrhm.n?igsh=MWl4ZTNmeWs3aWlmYg==" target="_blank" class="btn">Instagram</a>
+  <a href="mailto:isnanda.Kholifaturrohman@gmail.com" class="btn">Email</a>
+  <a href="https://wa.me/6285743083500" target="_blank" class="btn">WhatsApp</a>
+    
+  </div>
+</div>
+    
+  </div>
+
+  <footer>
+    &copy; 2025 Isnanda Kholifaturrohman
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

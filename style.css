@@ -1,0 +1,232 @@
+/* ==== Dasar ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f3f6fb;
+  color: #111;
+  line-height: 1.6;
+}
+header {
+  background: #4682B4;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+}
+nav a {
+  color: #c7c6c1;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+.section {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ==== Biodata ==== */
+#tentang {
+  background: url("IMG_20250814_201530_627.jpg") center/cover no-repeat;
+  color: #fff;
+  border-radius: 16px;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.biodata-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.biodata-foto img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biodata-foto img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.biodata-info {
+  margin-top: 20px;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.biodata-info h3 {
+  font-size: 1.6em;
+  margin-bottom: 8px;
+}
+
+.biodata-detail {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ==== Tombol ==== */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.ghost {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid rgba(0,123,255,0.1);
+}
+
+/* ==== Login Box ==== */
+.hidden-login {
+  max-width: 360px;
+  margin: 20px auto 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,125,255,0.5);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.1);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity .35s ease, transform .35s ease;
+}
+.hidden-login.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.hidden-login input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #111;
+  margin-top: 8px;
+}
+.hidden-login .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* ==== Blog ==== */
+.posts .post {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.post h3 {
+  margin-bottom: 6px;
+}
+.post small {
+  color: #666;
+}
+.new-post input, .new-post textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+}
+.new-post textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.form-btns {
+  margin-top: 8px;
+  text-align: right;
+}
+.logout-btn {
+  text-align: right;
+  margin-top: 10px;
+}
+/* ==== Kontainer Tombol ==== */
+.kontak-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* jarak antar tombol */
+  margin-top: 20px;
+}
+
+/* ==== Tombol ==== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #4682B4;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Efek hover */
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ==== Tombol Ghost (jika tetap mau dipakai di bagian lain) ==== */
+.btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 14px 0;
+  color: #666;
+}
+
+/* ==== Responsif ==== */
+@media (max-width: 600px) {
+  #tentang {
+    padding: 30px 10px;
+  }
+  .biodata-info {
+    width: 100%;
+  }
+  .biodata-foto img {
+    width: 130px;
+    height: 130px;
+  }
+}
