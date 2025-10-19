@@ -269,3 +269,19 @@ footer {
     height: 130px;
   }
 }
+.admin-controls {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
